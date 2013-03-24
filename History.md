@@ -1,5 +1,9 @@
 # master
 
+# 4.0.2
+
+* Rails 4 compatibility.
+
 # 4.0.1
 
 * Add missing animated-overlay.gif asset and fix image path.
