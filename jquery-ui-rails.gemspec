@@ -2,18 +2,19 @@
 require File.expand_path('../lib/jquery/ui/rails/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "jquery-ui-rails"
+  s.name        = "jquery-ui-rails-sass"
   s.version     = Jquery::Ui::Rails::VERSION
-  s.authors     = ["Jo Liss"]
-  s.email       = ["joliss42@gmail.com"]
-  s.homepage    = "https://github.com/joliss/jquery-ui-rails"
-  s.summary     = "jQuery UI packaged for the Rails asset pipeline"
-  s.description = "jQuery UI's JavaScript, CSS, and image files packaged for the Rails 3.1+ asset pipeline"
+  s.authors     = ["Jakob Hilden"]
+  s.email       = ["jakobhilden@gmail.com"]
+  s.homepage    = "https://github.com/jhilden/jquery-ui-rails-sass"
+  s.summary     = "jQuery UI stylesheets packaged as Sass files for the Rails asset pipeline"
+  s.description = "jQuery UI's CSS packaged as Sass stylesheets (with variables) for the Rails 3.1+ asset pipeline"
 
   s.required_rubygems_version = ">= 1.3.6"
 
   s.add_dependency "railties", ">= 3.1.0"
   s.add_dependency "jquery-rails"
+  s.add_dependency "jquery-ui-rails", "#{Jquery::Ui::Rails::VERSION}"
 
   s.add_development_dependency "json", "~> 1.7"
 
