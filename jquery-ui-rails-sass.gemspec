@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/jquery/ui/rails/version', __FILE__)
+require File.expand_path('../lib/jquery/ui/rails/sass/version', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "jquery-ui-rails-sass"
-  s.version     = Jquery::Ui::Rails::VERSION
+  s.version     = Jquery::Ui::Rails::Sass::VERSION
   s.authors     = ["Jakob Hilden"]
   s.email       = ["jakobhilden@gmail.com"]
   s.homepage    = "https://github.com/jhilden/jquery-ui-rails-sass"
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "railties", ">= 3.1.0"
   s.add_dependency "jquery-rails"
-  s.add_dependency "jquery-ui-rails", "#{Jquery::Ui::Rails::VERSION}"
+  s.add_dependency "jquery-ui-rails", "#{Jquery::Ui::Rails::Sass::VERSION}"
 
   s.add_development_dependency "json", "~> 1.7"
 

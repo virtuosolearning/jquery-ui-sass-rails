@@ -1,1 +1,1 @@
-require 'jquery/ui/rails'
+require 'jquery/ui/rails/sass'
