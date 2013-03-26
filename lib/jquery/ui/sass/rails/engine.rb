@@ -1,7 +1,7 @@
 module Jquery
   module Ui
-    module Rails
-      module Sass
+    module Sass
+      module Rails
         class Engine < ::Rails::Engine
         end
       end

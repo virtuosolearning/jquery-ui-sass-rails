@@ -1,7 +1,7 @@
 module Jquery
   module Ui
-    module Rails
-      module Sass
+    module Sass
+      module Rails
         VERSION = "4.0.2"
       end
     end
