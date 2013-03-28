@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = Jquery::Ui::Sass::Rails::VERSION
   s.authors     = ["Jakob Hilden"]
   s.email       = ["jakobhilden@gmail.com"]
-  s.homepage    = "https://github.com/jhilden/jquery-ui-rails-sass"
+  s.homepage    = "https://github.com/jhilden/jquery-ui-sass-rails"
   s.summary     = "jQuery UI stylesheets packaged as Sass files for the Rails asset pipeline"
   s.description = "jQuery UI's CSS packaged as Sass stylesheets (with variables) for the Rails 3.1+ asset pipeline"
 
