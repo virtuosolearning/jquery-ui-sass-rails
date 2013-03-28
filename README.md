@@ -53,6 +53,8 @@ $bgColorContent: purple // set custom value for jQueryUI variable
 @import jquery.ui.datepicker
 ```
 
+For a list of all jQuery UI variables check out:  https://github.com/jhilden/jquery-ui-sass-rails/blob/master/app/assets/stylesheets/_jquery.ui.variables.css.scss
+
 ## Credits
 
 This gem is only a complement to the `jquery-ui-rails` gem and wouldn't be possible without it's author [Jo Liss](https://github.com/joliss) and the other [contributors](https://github.com/joliss/jquery-ui-rails/contributors).
