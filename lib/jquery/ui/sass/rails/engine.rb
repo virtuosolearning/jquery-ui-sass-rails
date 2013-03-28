@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'jquery-ui-rails'
+
 module Jquery
   module Ui
     module Sass
