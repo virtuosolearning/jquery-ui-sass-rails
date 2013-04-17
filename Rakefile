@@ -1,5 +1,6 @@
 require 'json'
 require 'bundler/gem_tasks'
+require 'pry-debugger'
 
 desc 'remove SCSS files'
 task :clean_scss do
@@ -32,9 +33,14 @@ task :convert_to_scss do
     stylesheet_content.gsub!(/<%= image_path\((\S+)\) %>/) { "image-path(#{$1})" }
 
     # remove comment blocks with sprockets require directives, because they don't work well with Sass variables
-    stylesheet_content.gsub!(/\/\*[^\/]+require[^\/]+\*\//) do
+    stylesheet_content.gsub!(/\/\*[^\/]+require[^\/]+\*\//) do |match|
       if source_file.end_with?('jquery.ui.theme.css.erb')
         "@import 'jquery.ui.variables';\n"
+
+      elsif source_file.end_with?('jquery.ui.all.css.erb') || source_file.end_with?('jquery.ui.base.css.erb')
+        match.gsub!(' *= require ', '@import ')
+        match.gsub!(/\/\*| \*\//, '')
+
       else
         ''
       end
