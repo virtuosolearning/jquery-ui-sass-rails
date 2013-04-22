@@ -1,17 +1,47 @@
 # jquery-ui-sass-rails
 
-This gem packages the jQuery UI 1.10.0 stylesheets in **Sass format (SCSS syntax)** for the Rails 3.1+ [asset
+This gem packages the jQuery UI 1.10.2 stylesheets in **Sass format (SCSS syntax)** for the Rails 3.1+ [asset
 pipeline](http://guides.rubyonrails.org/asset_pipeline.html).
 
-It complements the [jquery-ui-rails](https://github.com/joliss/jquery-ui-rails), which already packages all the plain jQuery UI assets (javascript, css, images) by providing the stylesheets in Sass format allowing much easier customization through Sass variables.  It overwrites the plain CSS stylesheets from `jquery-ui-rails`.
+It complements the [jquery-ui-rails](https://github.com/joliss/jquery-ui-rails) gem, which already packages all the plain jQuery UI assets (javascript, css, images), by additionally providing the jQuery UI stylesheets in Sass format allowing much easier customization through Sass variables.  It overwrites the plain CSS stylesheets from `jquery-ui-rails`.
+
 
 ## Installation
 
-This gem already has `jquery-ui-rails` as a dependency, so it's enough to include only it in your Gemfile:
+This gem has `jquery-ui-rails` as a dependency, so it's sufficient to include only it in your Gemfile:
 
 ```ruby
 gem 'jquery-ui-sass-rails'
 ```
+
+## Sass Stylesheets
+
+Unlike recommended in `jquery-ui-rails` you should always use Sass's `@import` over of Sprocket's `= require`, just as the official `sass-rails` gem [recommends it](https://github.com/rails/sass-rails#important-note).
+
+So the way you import the stylesheets would be something like this:
+
+```sass
+// app/assets/stylesheets/application.css.sass
+
+@import jquery.ui.core // you always want that stylesheet
+@import jquery.ui.theme // import this when you want to build on jQuery UI's themeing
+@import jquery.ui.datepicker // import all the modules you need
+```
+
+The big advantage that the jQuery UI stylesheets have been converted to Sass in this gem is that you now have a super easy way to customize the jQuery UI themes using simple Sass variables.  You simply need to specify your own values **before** you import the jQuery UI stylesheets:
+
+```sass
+// app/assets/stylesheets/application.css.sass
+
+$bgColorContent: purple // set custom value for jQueryUI variable
+
+@import jquery.ui.core
+@import jquery.ui.theme // your custom variables will be used here
+@import jquery.ui.datepicker
+```
+
+For a list of all jQuery UI variables check out:  https://github.com/jhilden/jquery-ui-sass-rails/blob/master/app/assets/stylesheets/_jquery.ui.variables.css.scss
+
 
 ## JavaScript
 
@@ -27,33 +57,10 @@ or this:
 //= require jquery.ui.datepicker
 ```
 
-## Sass Stylesheets
+## Versioning
 
-For the stylesheets you should use Sass's `@import` instead of Sprocket's `= require`, just as the official `sass-rails` gem [recommends it](https://github.com/rails/sass-rails#important-note).
+As long as I don't break any important APIs I will try I try to stick to the versioning of `jquery-ui-rails` with an additional digit.  E.g. `jquery-ui-sass-rails` version `4.0.2.x` goes along with `jquery-ui-rails` version `4.0.2`.
 
-They way you import the stylesheets would be something like this:
-
-```sass
-// app/assets/stylesheets/application.css.sass
-
-@import jquery.ui.core // you always want that stylesheet
-@import jquery.ui.theme // import this when you want to build on jQuer UI's themeing
-@import jquery.ui.datepicker // import all the modules you need
-```
-
-The big advantage that the jQuery UI stylesheets have been converted to Sass in this gem are that you have a super easy way to customize the themes using simple Sass variables.  You only need to specify your own values **before** you import the jQuery UI stylesheets:
-
-```sass
-// app/assets/stylesheets/application.css.sass
-
-$bgColorContent: purple // set custom value for jQueryUI variable
-
-@import jquery.ui.core
-@import jquery.ui.theme // your custom variables will be used here
-@import jquery.ui.datepicker
-```
-
-For a list of all jQuery UI variables check out:  https://github.com/jhilden/jquery-ui-sass-rails/blob/master/app/assets/stylesheets/_jquery.ui.variables.css.scss
 
 ## Credits
 
