@@ -2,4 +2,4 @@
 
 # 4.0.2
 
-* Initials `jquery-ui-sass-rails` release
+* Initial `jquery-ui-sass-rails` release
