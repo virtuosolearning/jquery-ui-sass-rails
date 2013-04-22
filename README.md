@@ -28,7 +28,7 @@ So the way you import the stylesheets would be something like this:
 @import jquery.ui.datepicker // import all the modules you need
 ```
 
-The big advantage that the jQuery UI stylesheets have been converted to Sass in this gem is that you now have a super easy way to customize the jQuery UI themes using simple Sass variables.  You simply need to specify your own values **before** you import the jQuery UI stylesheets:
+The big advantage that the jQuery UI stylesheets have been converted to Sass in this gem is that you now have a super easy way to customize the jQuery UI themes using simple Sass variables.  You simply need to specify your own values **before** you import the `jquery.ui.theme` stylesheet:
 
 ```sass
 // app/assets/stylesheets/application.css.sass
@@ -41,6 +41,20 @@ $bgColorContent: purple // set custom value for jQueryUI variable
 ```
 
 For a list of all jQuery UI variables check out:  https://github.com/jhilden/jquery-ui-sass-rails/blob/master/app/assets/stylesheets/_jquery.ui.variables.css.scss
+
+## Themes
+
+`jquery-ui-sass-rails` comes with variable sets for all the themes in the [jQuery UI Themeroller](http://jqueryui.com/themeroller/), you use them by importing the respective partial before the `jquery.ui.theme`:
+
+```sass
+// app/assets/stylesheets/application.css.sass
+
+@import themes/jquery.ui.smoothness // variables for 'smothness' theme
+
+@import jquery.ui.core
+@import jquery.ui.theme
+@import jquery.ui.datepicker
+```
 
 
 ## JavaScript
