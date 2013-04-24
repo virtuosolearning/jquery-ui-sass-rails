@@ -16,7 +16,7 @@ gem 'jquery-ui-sass-rails'
 
 ## Sass Stylesheets
 
-Unlike recommended in `jquery-ui-rails` you should always use Sass's `@import` over of Sprocket's `= require`, just as the official `sass-rails` gem [recommends it](https://github.com/rails/sass-rails#important-note).
+Unlike recommended in `jquery-ui-rails` for stylesheets you should always use Sass's `@import` over of Sprocket's `= require`, just as the official `sass-rails` gem [recommends it](https://github.com/rails/sass-rails#important-note).
 
 So the way you import the stylesheets would be something like this:
 
