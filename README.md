@@ -3,7 +3,7 @@
 This gem packages the jQuery UI 1.10.2 stylesheets in **Sass format (SCSS syntax)** for the Rails 3.1+ [asset
 pipeline](http://guides.rubyonrails.org/asset_pipeline.html).
 
-It complements the [jquery-ui-rails](https://github.com/joliss/jquery-ui-rails) gem, which already packages all the plain jQuery UI assets (javascript, css, images), by additionally providing the jQuery UI stylesheets in Sass format allowing much easier customization through Sass variables.  It overwrites the plain CSS stylesheets from `jquery-ui-rails`.
+It complements the [jquery-ui-rails](https://github.com/joliss/jquery-ui-rails) gem, which already packages all the plain jQuery UI assets (javascript, css, images), by additionally providing the jQuery UI stylesheets in Sass format allowing much easier customization through Sass variables.  It overwrites the plain CSS stylesheets from `jquery-ui-rails` and leaves everything else untouched.
 
 
 ## Installation
@@ -26,6 +26,14 @@ So the way you import the stylesheets would be something like this:
 @import jquery.ui.core // you always want that stylesheet
 @import jquery.ui.theme // import this when you want to build on jQuery UI's themeing
 @import jquery.ui.datepicker // import all the modules you need
+```
+
+If you want to include the full jQuery UI CSS, you can do:
+
+```sass
+// app/assets/stylesheets/application.css.sass
+
+@import jquery.ui.all
 ```
 
 The big advantage that the jQuery UI stylesheets have been converted to Sass in this gem is that you now have a super easy way to customize the jQuery UI themes using simple Sass variables.  You simply need to specify your own values **before** you import the `jquery.ui.theme` stylesheet:
