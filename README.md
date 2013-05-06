@@ -40,7 +40,8 @@ $bgColorContent: purple // set custom value for jQueryUI variable
 @import jquery.ui.datepicker
 ```
 
-For a list of all jQuery UI variables check out:  https://github.com/jhilden/jquery-ui-sass-rails/blob/master/app/assets/stylesheets/_jquery.ui.variables.css.scss
+For a list of all jQuery UI variables check out:  https://github.com/jhilden/jquery-ui-sass-rails/blob/master/app/assets/stylesheets/themes/_jquery.ui.base.css.scss
+
 
 ## Themes
 
