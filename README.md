@@ -1,6 +1,6 @@
 # jquery-ui-sass-rails
 
-This gem packages the jQuery UI 1.10.2 stylesheets in **Sass format (SCSS syntax)** for the Rails 3.1+ [asset
+This gem packages the jQuery UI 1.10.3 stylesheets in **Sass format (SCSS syntax)** for the Rails 3.1+ [asset
 pipeline](http://guides.rubyonrails.org/asset_pipeline.html).
 
 It complements the [jquery-ui-rails](https://github.com/joliss/jquery-ui-rails) gem, which already packages all the plain jQuery UI assets (javascript, css, images), by additionally providing the jQuery UI stylesheets in Sass format allowing much easier customization through Sass variables.  It overwrites the plain CSS stylesheets from `jquery-ui-rails` and leaves everything else untouched.
