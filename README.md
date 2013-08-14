@@ -8,11 +8,13 @@ It complements the [jquery-ui-rails](https://github.com/joliss/jquery-ui-rails) 
 
 ## Installation
 
-This gem has `jquery-ui-rails` as a dependency, so it's sufficient to include only it in your Gemfile:
+Put this in your Gemfile and run `bundle install`:
 
 ```ruby
 gem 'jquery-ui-sass-rails'
 ```
+
+You should **not** include `jquery-ui-rails` in your Gemfile in addition, because `jquery-ui-sass-rails` already specifies that as an dependency in the correct version.
 
 ## Sass Stylesheets
 
