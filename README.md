@@ -5,6 +5,9 @@ pipeline](http://guides.rubyonrails.org/asset_pipeline.html).
 
 It complements the [jquery-ui-rails](https://github.com/joliss/jquery-ui-rails) gem, which already packages all the plain jQuery UI assets (javascript, css, images), by additionally providing the jQuery UI stylesheets in Sass format allowing much easier customization through Sass variables.  It overwrites the plain CSS stylesheets from `jquery-ui-rails` and leaves everything else untouched.
 
+## New maintainer wanted
+
+Both `jquery-ui` and `jquery-ui-rails` have been updated multiple times since the last release of this gem.  I'm currently not using `jquery-ui-sass-rails` in any of my apps, so the chances for new upgrades are very slim.  If you would like to take over maintenance of the gem, let's talk.
 
 ## Installation
 
